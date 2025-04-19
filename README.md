@@ -20,7 +20,7 @@ LIKE-TORRENT là một ứng dụng mô phỏng cơ chế hoạt động của B
 ## Cài đặt
 1. Clone repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-username/like-torrent.git
 cd like-torrent
 ```
 2. Cài đặt các gói phụ thuộc:
@@ -32,6 +32,19 @@ npm install
 
 ### Sử dụng file batch (Windows)
 Chạy file `run.bat`:
+```bash
+.\run.bat
+```
+### Sử dụng shell script (Linux)
+
+Chạy file `run.sh`:
+```bash
+# Cấp quyền thực thi cho file
+chmod +x run.sh
+
+# Chạy file
+./run.sh
+```
 
 Chọn một trong các tùy chọn:
 - Chạy máy chủ (seeder) - Chia sẻ file
@@ -46,23 +59,33 @@ node tracker.js
 ```
 - Chạy seeder:
 ```bash
-node seeder.js <file_path>
+cd src/Peer
+node index.js seeder
 ```
 - Chạy downloader:
 ```bash
-node downloader.js <torrent_file>
+node index.js download [client_id]
 ```
 
 ## Cấu trúc dự án
 
 ```
 like-torrent/
-├── tracker.js
-├── seeder.js
-├── downloader.js
-├── run.bat
-├── package.json
-└── README.md
+├── run.bat                # Script chạy ứng dụng trên Windows
+├── src/
+│   ├── Peer/              # Mã nguồn cho peer (seeder và downloader)
+│   │   ├── Client/        # Xử lý logic tải xuống
+│   │   │   ├── download.js
+│   │   │   ├── timerControl.js
+│   │   │   ├── tracker.js
+│   │   │   └── ...
+│   │   ├── util/          # Các tiện ích
+│   │   │   ├── message.js # Xử lý giao thức BitTorrent
+│   │   │   └── ...
+│   │   └── index.js       # Điểm khởi đầu chạy peer
+│   │
+│   └── Tracker/           # Mã nguồn cho Tracker Server
+│       └── server.js
 ```
 
 ## Cách hoạt động
