@@ -117,8 +117,3 @@ like-torrent/
 - Tối ưu thuật toán chọn `piece` để tải
 - Cải thiện khả năng phục hồi khi mạng kém ổn định
 
-## Tác giả
-Nhóm sinh viên - Môn Mạng Máy Tính - Đại học XYZ
-
-> **Lưu ý:** Dự án này được tạo cho mục đích học tập và nghiên cứu. Không khuyến khích sử dụng cho mục đích phi pháp hoặc vi phạm bản quyền.
-
