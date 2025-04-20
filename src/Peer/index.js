@@ -23,7 +23,7 @@ const torrentPath = "QLDA.mp4.torrent";
 // const torrentPath = 'drive-download-20241105T125636Z-001.torrent';
 // const torrentPath = 'raw_chap2,3-20241102T142328Z-001.torrent';
 // const torrentPath = 'Pic4rpCa.torrent';
-const torrent = torrentParser.open(torrentPath);
+const torrent = torrentParser.open("torrent_file/" + torrentPath);
 
 const basePath = path.dirname(torrentPath);
 

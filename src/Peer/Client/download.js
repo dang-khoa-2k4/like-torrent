@@ -27,7 +27,7 @@ const {
 } = require("./properties");
 const readline = require("readline");
 
-const maximumPeerNeed = 4;
+const maximumPeerNeed = 10;
 
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -101,9 +101,12 @@ module.exports = async (
           setStatus(torrent, "completed");
           console.log(
             "Download completed in",
-            new Date().getTime() - getTimer(torrent).getTime(),
+            (new Date().getTime() - getTimer(torrent).getTime()),
             "ms"
           );
+          console.log("Download speed: ", 
+            (torrent.info.length / (2 ** 10)) / (new Date().getTime() - getTimer(torrent).getTime()), 
+            "MB/s");
 
           timerControl.stopPeerListTimer(torrent);
 
