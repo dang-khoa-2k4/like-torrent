@@ -2,6 +2,10 @@ const tracker = require("./Client/tracker");
 const torrentParser = require("./Client/torrentParser");
 const download = require("./Client/download");
 const { server, state } = require("./Server/server");
+const { processFiles } = require("./Client/readAndWritePieces");
+const { selectFiles } = require("./Client/chooseFile");
+
+const { createProgressList, setTimer } = require("./Client/properties");
 const {
   genPort,
   getIntervalForGetListPeer,
@@ -11,18 +15,8 @@ const {
   getDownloaded,
 } = require("./Client/util");
 const path = require("path");
-const { processFiles } = require("./Client/readAndWritePieces");
-const { selectFiles } = require("./Client/chooseFile");
-
-const { createProgressList, setTimer } = require("./Client/properties");
-
 const args = process.argv.slice(2);
-// const torrentPath = 'bluemew.torrent';
 const torrentPath = "QLDA.mp4.torrent";
-// const torrentPath = 'video.mkv.torrent';
-// const torrentPath = 'drive-download-20241105T125636Z-001.torrent';
-// const torrentPath = 'raw_chap2,3-20241102T142328Z-001.torrent';
-// const torrentPath = 'Pic4rpCa.torrent';
 const torrent = torrentParser.open("torrent_file/" + torrentPath);
 
 const basePath = path.dirname(torrentPath);

@@ -18,15 +18,8 @@ module.exports.msgHandler = function (
 ) {
   if (isHandshake(msg)) {
     console.log("connect succesfully");
-    // queue.choked = false;
-    // console.log("requested: ",pieces._requested);
-    // console.log("received: ",pieces._received);
   } else {
     const m = message.parse(msg);
-    // console.log("message:", m);console.log(piecesBuffer);
-    // console.log(piecesBuffer);
-    // console.log(peer.peerId);
-    // if(m.id!=7) console.log(`received msg from ${peer.port}:`, m);
     if (m.id === 0) chokeHandler(queue);
     if (m.id === 1) unchokeHandler(socket, pieces, queue, peer);
     if (m.id === 4)
@@ -79,9 +72,6 @@ function haveHandler(payload, socket, pieces, queue, peer, bitfield) {
   if (!pieces.havePiece(pieceIndex)) {
     queue.queue(pieceIndex, ++pieces._freq[pieceIndex]);
   }
-  // console.log(`reeceived have message from peer have ${peer.port}`);
-  // console.log(`queue for peer have socket ${peer.port}:`, queue._queue.size());
-  // console.log('queue empty:', queueEmpty);
   if (queueEmpty) requestPiece(socket, pieces, queue, peer);
 }
 
@@ -121,7 +111,6 @@ function bitfieldHandler(socket, pieces, queue, payload, peer, bitfield) {
   } else {
     socket.write(message.buildUninterested());
   }
-  // console.log("send interested");
 }
 
 function pieceHandler(
