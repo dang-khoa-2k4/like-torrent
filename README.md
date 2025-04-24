@@ -20,7 +20,7 @@ LIKE-TORRENT là một ứng dụng mô phỏng cơ chế hoạt động của B
 ## Cài đặt
 1. Clone repository:
 ```bash
-git clone https://github.com/your-username/like-torrent.git
+git clone https://github.com/dang-khoa-2k4/like-torrent.git
 cd like-torrent
 ```
 2. Cài đặt các gói phụ thuộc:
