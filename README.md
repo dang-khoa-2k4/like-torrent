@@ -9,7 +9,7 @@ LIKE-TORRENT là một ứng dụng mô phỏng cơ chế hoạt động của B
 - **Giao thức P2P:** Trao đổi dữ liệu trực tiếp giữa các peer
 - **Phân mảnh file:** Chia file thành nhiều mảnh nhỏ để tải từ nhiều nguồn
 - **Đa luồng:** Sử dụng Worker Threads để tối ưu hiệu suất tải xuống
-- **Cơ chế rarest-first:** Ưu tiên tải các phần hiếm trong mạng
+- **Choke/Unchoke:** Chiến lược lựa chọn peer để kết nối
 - **Hỗ trợ seeding:** Chia sẻ lại file sau khi tải xong
 
 ## Yêu cầu hệ thống

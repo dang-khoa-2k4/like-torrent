@@ -94,10 +94,13 @@ module.exports = class {
     }
 
     const blockIndex = pieceBlock.begin / tp.BLOCK_LEN;
+    
     return !this._requested[
       pieceBlock.index * tp.blocksPerPiece(this.torrent, 0) + blockIndex
     ];
   }
+
+
   havePiece(pieceIndex) {
     // if(!this._received[pieceIndex].every(block=> block)) console.log(`piece Index: ${pieceIndex}:`,this._received[pieceIndex]);
     const offsetBegin = pieceIndex * tp.blocksPerPiece(this.torrent, 0);

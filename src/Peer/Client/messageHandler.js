@@ -142,6 +142,7 @@ function pieceHandler(
     requestPiece(socket, pieces, queue, peer);
     return;
   }
+
   parentPort.postMessage({ type: "downloaded", payload: payload, peer });
   parentPort.postMessage({ type: "received", port: peer.port });
   pieces.addReceived(payload);
