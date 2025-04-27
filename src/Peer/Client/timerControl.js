@@ -1,7 +1,7 @@
 const { getIntervalForGetListPeer, setTimerForGetListPeer, getTimerForGetListPeer } = require("./util");
-const { inforHash } = require("./torrentParser");
-const { updateNumPeerConnected } = require("./properties");
-const tracker = require("./tracker");
+const { inforHash } = require("./TorrentParser");
+const { updateNumPeerConnected } = require("./Properties");
+const tracker = require("./Tracker");
 
 // Lưu trữ tham chiếu đến hàm download
 let downloadCallback = null;

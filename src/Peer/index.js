@@ -1,11 +1,11 @@
-const tracker = require("./Client/tracker");
-const torrentParser = require("./Client/torrentParser");
+const tracker = require("./Client/Tracker");
+const torrentParser = require("./Client/TorrentParser");
 const download = require("./Client/download");
 const { server, state } = require("./Server/server");
-const { processFiles } = require("./Client/readAndWritePieces");
+const { processFiles } = require("./Client/RnWPieces");
 const { selectFiles } = require("./Client/chooseFile");
 
-const { createProgressList, setTimer } = require("./Client/properties");
+const { createProgressList, setTimer } = require("./Client/Properties");
 const {
   genPort,
   getIntervalForGetListPeer,

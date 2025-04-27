@@ -1,7 +1,7 @@
 const fs = require("fs");
 const verifyPiece = require("../util/torrentCheck").verifyPiece;
 const SharedPieces = require("./SharedPieces");
-const tp = require("./torrentParser");
+const tp = require("./TorrentParser");
 
 function readFileAndWritePieces(
   fileInfo,

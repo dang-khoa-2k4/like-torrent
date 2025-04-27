@@ -1,5 +1,5 @@
 const crypto = require("crypto");
-const { inforHash } = require("./torrentParser");
+const { inforHash } = require("./TorrentParser");
 
 let id = {};
 let port = {};

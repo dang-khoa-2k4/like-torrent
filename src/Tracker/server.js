@@ -1,5 +1,5 @@
 const http = require("http");
-const { inforHash } = require("../Peer/Client/torrentParser");
+const { inforHash } = require("../Peer/Client/TorrentParser");
 
 const hostname = "127.0.0.1"; // Server IP address
 const port = 8888; // Server port

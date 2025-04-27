@@ -1,6 +1,6 @@
 "use strict";
 
-const tp = require("./torrentParser");
+const tp = require("./TorrentParser");
 
 module.exports = class {
   constructor(

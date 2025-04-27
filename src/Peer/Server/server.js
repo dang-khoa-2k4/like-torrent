@@ -1,6 +1,6 @@
 const net = require("net");
 const message = require("../util/message");
-const { inforHash } = require("../Client/torrentParser");
+const { inforHash } = require("../Client/TorrentParser");
 const { verifyPiece } = require("../util/torrentCheck");
 const { updateUploaded } = require("../Client/util");
 

@@ -1,6 +1,6 @@
 const Buffer = require("buffer").Buffer;
-const tracker = require("./tracker");
-const timerControl = require('./timerControl');
+const tracker = require("./Tracker");
+const timerControl = require('./TimerControl');
 const {
   genID,
   genPort,
@@ -16,7 +16,7 @@ const {
   blockLen,
   blocksPerPiece,
   size,
-} = require("./torrentParser");
+} = require("./TorrentParser");
 const {
   updateNumPeerConnected,
   updateNumPeerDownloading,
@@ -24,7 +24,7 @@ const {
   removeCountDownloading,
   getTimer,
   updateProgressList,
-} = require("./properties");
+} = require("./Properties");
 const readline = require("readline");
 
 const maximumPeerNeed = 10;

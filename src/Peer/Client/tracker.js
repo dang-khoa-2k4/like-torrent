@@ -1,5 +1,5 @@
 const http = require("http");
-const torrentParser = require("./torrentParser");
+const torrentParser = require("./TorrentParser");
 const {
   genID,
   genPort,

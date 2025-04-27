@@ -1,4 +1,4 @@
-const { inforHash } = require("./torrentParser");
+const { inforHash } = require("./TorrentParser");
 
 /*
     sizeList={

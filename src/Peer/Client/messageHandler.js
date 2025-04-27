@@ -1,6 +1,6 @@
 const message = require("../util/message");
 const fs = require("fs");
-const torrentParser = require("../Client/torrentParser");
+const torrentParser = require("./TorrentParser");
 const path = require("path");
 
 module.exports.msgHandler = function (

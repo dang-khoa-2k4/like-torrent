@@ -1,6 +1,6 @@
 "use strict";
 const { PriorityQueue } = require("@datastructures-js/priority-queue");
-const tp = require("./torrentParser");
+const tp = require("./TorrentParser");
 
 module.exports = class {
   constructor(torrent) {
