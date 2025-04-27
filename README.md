@@ -31,7 +31,7 @@ npm install
 ## Cách sử dụng
 
 ### Lưu ý quan trọng
-- **Thêm file cần tải:** Đặt file cần tải vào thư mục `torrent_file`.
+- **Thêm file để seed:** Đặt file dùng để seed vào thư mục `received`.
 - **Thêm file `.torrent`:** Đặt file `.torrent` tương ứng vào thư mục `torrent_file`. File `.torrent` chứa thông tin về file cần tải và các mảnh của nó.
 - **Thư mục `torrent_file`:** Đây là thư mục bắt buộc để mô phỏng hoạt động của ứng dụng.
 
